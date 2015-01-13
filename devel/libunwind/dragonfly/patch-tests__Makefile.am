@@ -1,0 +1,11 @@
+--- tests/Makefile.am.orig	2015-01-13 22:46:28.121365000 +0100
++++ tests/Makefile.am	2015-01-13 22:46:49.551698000 +0100
+@@ -47,7 +47,7 @@
+ 			test-async-sig test-flush-cache test-init-remote \
+ 			test-mem test-setjmp test-ptrace Ltest-varargs	 \
+ 			Ltest-nomalloc Ltest-nocalloc Lrs-race
+- noinst_PROGRAMS_cdep = forker crasher mapper test-ptrace-misc		 \
++ noinst_PROGRAMS_cdep = forker mapper test-ptrace-misc			 \
+ 			Gperf-simple Lperf-simple
+ 
+  noinst_PROGRAMS_cdep += Gperf-trace Lperf-trace
