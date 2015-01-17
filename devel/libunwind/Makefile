@@ -25,7 +25,7 @@ AUTOMAKE_ARGS=	-c -a
 
 .if ${ARCH} == i386
 PLIST_SUB=	ARCH=x86
-.elif ${ARCH} == amd64
+.elif ${ARCH} == x86_64
 PLIST_SUB=	ARCH=x86_64
 .endif
 
