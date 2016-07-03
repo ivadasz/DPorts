@@ -1,0 +1,4 @@
+dragonfly_libinput is an adapted libinput implementation for DragonFly,
+based on Martin Pieuchot's libinput adaption for OpenBSD.
+
+WWW: http://leaf.dragonflybsd.org/~ivadasz/dragonfly_libinput
