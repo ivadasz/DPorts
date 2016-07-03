@@ -8,6 +8,8 @@ CATEGORIES=	x11-drivers
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.Org libinput input driver
 
+LIB_DEPENDS=	libinput.so:devel/libinput
+
 CONFIGURE_ARGS=	LIBINPUT_CFLAGS=-I${PREFIX}/include LIBINPUT_LIBS="-L${PREFIX}/lib -linput"
 
 XORG_CAT=	driver
