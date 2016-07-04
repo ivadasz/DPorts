@@ -1,0 +1,13 @@
+Fix "working kqueue... no" test to not require read twice
+
+--- configure.ac.orig	2015-01-05 17:17:40.000000000 +0200
++++ configure.ac
+@@ -433,7 +433,7 @@ main(int argc, char **argv)
+ 	int fd[[2]];
+ 	struct kevent ev;
+ 	struct timespec ts;
+-	char buf[[8000]];
++	char buf[[16000]];
+ 
+ 	if (pipe(fd) == -1)
+ 		exit(1);

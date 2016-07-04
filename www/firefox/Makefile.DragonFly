@@ -9,3 +9,18 @@ OPTIONS_DEFAULT= BUNDLED_CAIRO FFMPEG ALSA GTK2
 .else
 CONFLICTS_INSTALL+=	firefox-lite-[0-9].*
 .endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g'		\
+			 -e 's@\(defined (__FreeBSD__)\)@(\1||defined(__DragonFly__))@g'	\
+		${WRKSRC}/intl/icu/source/common/unicode/platform.h		\
+		${WRKSRC}/ipc/chromium/src/third_party/libevent/kqueue.c	\
+		${WRKSRC}/ipc/chromium/src/third_party/libevent/buffer.c	\
+		${WRKSRC}/mozglue/misc/TimeStamp_posix.cpp			\
+		${WRKSRC}/xpcom/reflect/xptcall/genstubs.pl			\
+		${WRKSRC}/xpcom/glue/standalone/nsXPCOMGlue.cpp			\
+		${WRKSRC}/xpcom/io/nsAppFileLocationProvider.cpp		\
+		${WRKSRC}/netwerk/sctp/src/usrsctp.h				\
+		${WRKSRC}/js/src/ctypes/libffi/src/dlmalloc.c			\
+		${WRKSRC}/build/stlport/stlport/stl/config/features.h		\
+		${WRKSRC}/security/sandbox/chromium/build/build_config.h
