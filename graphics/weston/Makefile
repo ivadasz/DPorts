@@ -29,7 +29,8 @@ LIB_DEPENDS=	libxkbcommon.so:x11/libxkbcommon		\
 		libdrm.so:graphics/libdrm			\
 		libpng.so:graphics/png				\
 		libwebp.so:graphics/webp			\
-		libffi.so:devel/libffi
+		libffi.so:devel/libffi				\
+		libinput.so:devel/libinput
 
 LIBS+=		-lexecinfo
 
