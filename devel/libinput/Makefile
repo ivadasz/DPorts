@@ -12,4 +12,8 @@ LICENSE=	MIT
 
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:multimedia/v4l_compat
 
+post-install:
+	@${MKDIR} ${STAGEDIR}/libdata/pkgconfig
+	${INSTALL_DATA} ${WRKSRC}/libinput.pc ${STAGEDIR}/${PREFIX}/libdata/pkgconfig
+
 .include <bsd.port.mk>
